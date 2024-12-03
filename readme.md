@@ -55,7 +55,7 @@ Modellare la struttura di un database per memorizzare tutti i dati riguardanti u
 - ID | BIGINT - AUTO-INCREMENT - PRIMARY_KEY (UNIQUE, NOTNULL)
 - NOME | VARCHAR(20) - NOT NULL
 - COGNONME | VARCHAR(20) - NOT NULL
-- MATRICOLA | VARCHAR(30) - NOT NULL
+- MATRICOLA | VARCHAR(30) - NOT NULL - UNIQUE
 - Corso_di_Laurea_id
 
 ## Partecipazioni :

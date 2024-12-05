@@ -21,20 +21,20 @@ GROUP BY `office_address`;
 
 SELECT 
 `exam_id`, 
-`student_id`,
-AVG(`vote`) AS `avarage_vote`
+AVG(`vote`) AS `average_vote`
 FROM `exam_student`
-GROUP BY `exam_id`, `student_id`
-ORDER BY `student_id`;
+GROUP BY `exam_id`
+ORDER BY `exam_id`;
+
+
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
 SELECT 
-`name`,
 `department_id`,
 COUNT(`id`) AS `degree_count`
 FROM `degrees`
-GROUP BY `name`, `department_id`;
+GROUP BY `department_id`;
 
 # Joins:
 
@@ -97,7 +97,7 @@ JOIN `course_teacher` ON `course_teacher`.`teacher_id` = `teachers`.`id`
 JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id`
 JOIN `degrees` ON `courses`.`degree_id` = `degrees`.`id`
 JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
-WHERE `departments`.`name` = 'DIpartimento di Matematica';
+WHERE `departments`.`name` = 'Dipartimento di Matematica';
 
 
 # BONUS: Selezionare per ogni studente il numero di tentativi sostenuti per ogni esame, stampando anche il voto massimo. Successivamente, filtrare i tentativi con voto minimo 18.
